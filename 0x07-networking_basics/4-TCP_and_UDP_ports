@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Shebang line specifying the interpreter to be used (in this case, Bash)
+
+# Displays listening ports. Includes listening sockets as well
+# + as the PID and name of the program to which each socket belongs.
+# The netstat command with options:
+# -l: Show only listening sockets
+# --program: Display the PID and name of the program to which each socket belongs
+
+netstat -l --program
