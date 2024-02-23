@@ -1,5 +1,4 @@
-# install flask from pip3
-package { 'flask' :
-    ensure   => '2.1.0',
-    provider => 'pip3',
-    }
+package { 'puppet-lint':
+  ensure => '2.5.0',  # Update to the version that doesn't require --no-rdoc if available
+  provider => gem,
+}
