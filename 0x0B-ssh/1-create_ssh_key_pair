@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Creates an RSA key pair with the passphrase betty
+=======
+# Creates an RSA SSH key pair
+>>>>>>> f022b49add3aaf83e68e28a09e812465b7e7f09a
 ssh-keygen -f school -b 4096 -N betty
