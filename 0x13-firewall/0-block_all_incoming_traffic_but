@@ -29,3 +29,4 @@ sudo ufw --force enable
 
 # Echo statement to indicate completion
 echo -e "Process Completed.\n"
+
