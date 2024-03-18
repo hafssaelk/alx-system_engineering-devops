@@ -1,31 +1,8 @@
-#!/bin/bash
-
-# Echo statement to indicate update process
-echo -e "Updating...\n"
-
-# Update package lists
-sudo apt-get update
-
-# Echo statement to indicate installation process
-echo -e "Installing UFW...\n"
-
-# Install UFW
-sudo apt-get install -y ufw
-
-# Echo statement to indicate configuration process
-echo -e "Configuring UFW...\n"
-
-# Set default policies: Deny Incoming, Allow Outgoing
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-
-# Allow SSH (port 22), HTTP (port 80), and HTTPS (port 443) traffic
-sudo ufw allow 22/tcp     # Allow SSH
-sudo ufw allow 80/tcp     # Allow HTTP
-sudo ufw allow 443/tcp    # Allow HTTPS
-
-# Enable UFW forcefully without user interaction
-sudo ufw --force enable
-
-# Echo statement to indicate completion
-echo -e "Process Completed.\n"
+sudo apt-get install ufw
+sudo ufw status
+sudo ufw enable -y
+sudo ufw default deny incoming -y
+sudo ufw default allow outgoing -y
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
